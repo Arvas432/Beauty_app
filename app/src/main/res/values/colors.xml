@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightest_brown">#E4C7A5</color>
+    <color name="light_brown">#C49D72</color>
+    <color name="semidark_gray">#7A7A7A</color>
+    <color name="light_gray">#CDCDCD</color>
+    <color name="darkest_gray">#3F3F3F</color>
+    <color name="lightest_gray">#EAEAEA</color>
+    <color name="almost_black">#181818</color>
+    <color name="list_item_background">#F6F6F6</color>
+    <color name="hamburger_color">#292D32</color>
+</resources>
