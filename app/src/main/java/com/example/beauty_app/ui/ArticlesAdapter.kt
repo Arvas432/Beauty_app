@@ -1,17 +1,14 @@
 package com.example.beauty_app.ui
 
-import android.os.Handler
-import android.os.Looper
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
-import androidx.navigation.findNavController
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.beauty_app.R
 import com.example.beauty_app.databinding.ImagesItemViewBinding
-import com.example.beauty_app.databinding.SearchListItemBinding
 import com.example.beauty_app.domain.search.models.Article
-import com.google.gson.Gson
+
 
 class ArticlesAdapter(private val articles: List<Article>) : RecyclerView.Adapter<ViewHolderImageItem>() {
 
@@ -26,6 +23,11 @@ class ArticlesAdapter(private val articles: List<Article>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: ViewHolderImageItem, position: Int) {
         holder.bind(articles[position])
+        holder.itemView.setOnClickListener{
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(articles[position].link)
+            holder.itemView.context.startActivity(i)
+        }
     }
 
 

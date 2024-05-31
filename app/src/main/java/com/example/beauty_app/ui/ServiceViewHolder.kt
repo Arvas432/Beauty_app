@@ -14,7 +14,6 @@ class ServiceViewHolder(private val binding: ServiceListItemBinding): RecyclerVi
         binding.title.text = model.title
         binding.timer.text = model.timer
         binding.price.text = model.price
-        val random = Random.nextInt(2)
         when(model.title){
             "Ботулинотерапия" -> binding.image.background = itemView.resources.getDrawable(R.drawable.botox)
             "Массаж" -> binding.image.background = itemView.resources.getDrawable(R.drawable.massage)

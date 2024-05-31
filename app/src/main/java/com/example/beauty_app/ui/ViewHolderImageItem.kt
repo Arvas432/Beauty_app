@@ -12,12 +12,11 @@ import kotlin.random.Random
 class ViewHolderImageItem(private val binding: ImagesItemViewBinding): RecyclerView.ViewHolder(binding.root){
 
     fun bind(model: Article){
-        val random = Random.nextInt(2)
         binding.title.text = model.text
-        when(random){
-            0 -> binding.backgroundImage.background = itemView.resources.getDrawable(R.drawable.kartinochka1)
-            1 -> binding.backgroundImage.background = itemView.resources.getDrawable(R.drawable.kartinochka_2)
-            2 -> binding.backgroundImage.background = itemView.resources.getDrawable(R.drawable.kartinochka3)
+        when(model.text){
+            "Мифы о\nлазерной\nэпиляции"-> binding.backgroundImage.background = itemView.resources.getDrawable(R.drawable.kartinochka1)
+            "Подбери\nсебе уход" -> binding.backgroundImage.background = itemView.resources.getDrawable(R.drawable.kartinochka_2)
+            else -> binding.backgroundImage.background = itemView.resources.getDrawable(R.drawable.kartinochka3)
         }
     }
 }

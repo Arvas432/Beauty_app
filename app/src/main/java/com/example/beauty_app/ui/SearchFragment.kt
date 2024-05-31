@@ -26,8 +26,8 @@ class SearchFragment : Fragment() {
     private val viewModel by viewModel<SearchViewModel>()
     private var searchFieldEmpty: Boolean = true
     private var products = ArrayList<MakeupItem>()
-    private var services = arrayListOf<Service>(Service("Ботулинотерапия", "300-13000 руб" , "50 мин"), Service("Массаж", "1000-5000 руб" , "50 мин"))
-    private var articles = arrayListOf<Article>(Article("Мифы о\nлазерной\nэпиляции"),Article("Я не\nзнаю че еще\nсюда написать"))
+    private var services = arrayListOf<Service>(Service("Ботулинотерапия","50 мин", "300-13000 руб", "https://vk.com/wall-211044023_304"), Service("Массаж", "50 мин","1000-5000 руб" , "https://vk.com/wall-211044023_304"))
+    private var articles = arrayListOf<Article>(Article("Мифы о\nлазерной\nэпиляции", "https://vk.com/wall-211044023_310"),Article("Подбери\nсебе уход","https://vk.com/wall-211044023_311" ))
     private lateinit var productListAdapter: ProductListAdapter
     private lateinit var servicesAdapter: ServicesAdapter
     private lateinit var articlesAdapter: ArticlesAdapter

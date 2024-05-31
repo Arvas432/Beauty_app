@@ -1,5 +1,7 @@
 package com.example.beauty_app.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +23,11 @@ class ServicesAdapter(private val services: List<Service>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: ServiceViewHolder, position: Int) {
         holder.bind(services[position])
+        holder.itemView.setOnClickListener{
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(services[position].link)
+            holder.itemView.context.startActivity(i)
+        }
     }
 
 
