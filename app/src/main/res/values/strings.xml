@@ -35,4 +35,18 @@
     <string name="wednesday">Вторник, 12:00</string>
     <string name="additional">Доп</string>
     <string name="Services">Услуги</string>
+    <string name="login_header">Войти</string>
+    <string name="enter_login_and_password">Введите свой логин и пароль</string>
+    <string name="login_data">Логин</string>
+    <string name="enter_login">Введите логин</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Введите email</string>
+    <string name="password">Пароль</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="already_have_an_account">Уже есть аккаунт?</string>
+    <string name="continue_text">Продолжить</string>
+    <string name="registration_success">Регистрация успешна!</string>
+    <string name="something_went_wrong">Что то пошло не так :(</string>
 </resources>

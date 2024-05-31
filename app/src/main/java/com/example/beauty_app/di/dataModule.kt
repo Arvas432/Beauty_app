@@ -1,8 +1,10 @@
 package com.example.beauty_app.di
 
+import KtorApi
 import MakeupApi
 import NetworkClient
 import RetrofitNetworkClient
+import UserRepository
 import android.content.Context
 import com.google.gson.Gson
 import org.koin.android.ext.koin.androidContext
@@ -26,7 +28,11 @@ val dataModule = module{
     single{
         Gson()
     }
+    single {
+        RegisterClient.instance.create(KtorApi::class.java)
+    }
     single<NetworkClient>{
         RetrofitNetworkClient(get())
     }
+    single { UserRepository(get()) }
 }

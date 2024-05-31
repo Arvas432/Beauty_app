@@ -46,6 +46,9 @@ class SearchFragment : Fragment() {
         viewModel.getScreenStateLiveData().observe(viewLifecycleOwner){
             renderState(it)
         }
+        if (arguments!=null){
+            binding.userName.text = requireArguments().getString(LOGIN_VALUE_KEY)
+        }
         servicesAdapter = ServicesAdapter(services)
         articlesAdapter = ArticlesAdapter(articles)
         binding.searchEt.setText(viewModel.getSearchData())
@@ -144,4 +147,7 @@ class SearchFragment : Fragment() {
         _binding = null
     }
 
+    companion object{
+        const val LOGIN_VALUE_KEY = "LOGIN_VALUE_KEY"
+    }
 }

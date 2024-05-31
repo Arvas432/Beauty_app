@@ -1,5 +1,6 @@
 package com.example.beauty_app.di
 
+import com.example.beauty_app.ui.AuthorizationViewModel
 import com.example.beauty_app.ui.SearchHistoryViewModel
 import com.example.beauty_app.ui.SearchViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -11,5 +12,8 @@ val viewModelModule = module {
     }
     viewModel {
         SearchHistoryViewModel(get())
+    }
+    viewModel {
+        AuthorizationViewModel(get())
     }
 }
